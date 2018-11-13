@@ -9,6 +9,8 @@
                 <Folder Name="路径资源" Value="../View/PathPage.xaml"  FIcon="&#xe785;">
                     <Folder Name="毒液路径" Value="../View/PathPage.xaml"  FIcon="&#xe799;"/>
                     <Folder Name="地图路径" Value="../View/EarthPathPage.xaml"  FIcon="&#xe799;"/>
+                    <Folder Name="ttt路径" Value="../View/CenterPathPage.xaml"  FIcon="&#xe799;"/>
+
                 </Folder>
             </FileSystem>
         </x:XData>

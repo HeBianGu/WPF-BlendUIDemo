@@ -79,6 +79,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="View\CenterPathPage.xaml.cs">
+      <DependentUpon>CenterPathPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\EarthPathPage.xaml.cs">
       <DependentUpon>EarthPathPage.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,10 @@
     <Page Include="Provider\TreeDictionary.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\CenterPathPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\EarthPathPage.xaml">
       <SubType>Designer</SubType>
