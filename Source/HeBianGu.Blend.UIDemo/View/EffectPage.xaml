@@ -1,0 +1,220 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HeBianGu.Blend.UIDemo.View"
+      xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" xmlns:WpfControlLib="clr-namespace:HeBianGu.General.WpfControlLib;assembly=HeBianGu.General.WpfControlLib" x:Class="HeBianGu.Blend.UIDemo.View.EffectPage"
+      mc:Ignorable="d" 
+      Title="EffectPage">
+
+    <Grid>
+
+        <TabControl>
+            <TabItem Header="ColorToneEffect">
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Text="色调："/>
+                        <ed:Callout Content="Callout" Fill="#FFF4F4F5" Height="100" Width="100"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"  Stroke="Black">
+
+                            <ed:Callout.Effect>
+                                <ee:ColorToneEffect DarkColor="#FFF10000" LightColor="#FFC4FD00" Desaturation="0.5"/>
+                            </ed:Callout.Effect>
+
+                        </ed:Callout>
+
+                        <ed:Callout Content="Callout" Fill="#FFF4F4F5" Height="100" Width="100"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"  Stroke="Black"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="DropShadowEffect">
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Text="阴影："/>
+                        <ed:RegularPolygon Fill="#FFF4F4F5" Height="74.5" Stroke="Black" Width="85">
+                            <ed:RegularPolygon.Effect>
+                                <DropShadowEffect/>
+                            </ed:RegularPolygon.Effect>
+                        </ed:RegularPolygon>
+
+                        <ed:RegularPolygon Fill="#FFF4F4F5" Height="74.5" Stroke="Black" Width="85">
+                            <ed:RegularPolygon.Effect>
+                                <DropShadowEffect ShadowDepth="0" BlurRadius="20"/>
+                            </ed:RegularPolygon.Effect>
+                        </ed:RegularPolygon>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="EmbossedEffect">
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Text="有凸饰的;饰以浮雕图案的："/>
+                        <Ellipse Fill="#FFF4F4F5" Height="95" Stroke="Black" Width="100.5">
+                            <Ellipse.Effect>
+                                <ee:EmbossedEffect Amount="100" Color="Green"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+
+                        <Ellipse Fill="#FFF4F4F5" Height="95" Stroke="Black" Width="100.5"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="MagnifyEffect">
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Text="放大 ："/>
+                        <ed:RegularPolygon Fill="#FFF4F4F5" Height="66.5" Stroke="Black" Width="71.5">
+                            <ed:RegularPolygon.Effect>
+                                <ee:MagnifyEffect Amount="10" Center="0.6,0.6"/>
+                            </ed:RegularPolygon.Effect>
+                        </ed:RegularPolygon>
+                        <ed:RegularPolygon Fill="#FFF4F4F5" Height="66.5" Stroke="Black" Width="71.5">
+                            <ed:RegularPolygon.Effect>
+                                <ee:MagnifyEffect Amount="10"/>
+                            </ed:RegularPolygon.Effect>
+                        </ed:RegularPolygon>
+                        <ed:RegularPolygon Fill="#FFF4F4F5" Height="66.5" Stroke="Black" Width="71.5">
+                            <ed:RegularPolygon.Effect>
+                                <ee:MagnifyEffect Amount="10" InnerRadius="0.5" OuterRadius="0.5"/>
+                            </ed:RegularPolygon.Effect>
+                        </ed:RegularPolygon>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="MonochromeEffect">
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Text="单色画，单色照片，黑白照片;："/> 
+                        <Ellipse Fill="Yellow" Height="100" Stroke="Yellow" Width="100">
+                            <Ellipse.Effect>
+                                <ee:MonochromeEffect Color="Blue"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+                        <Ellipse Fill="Yellow" Height="100" Stroke="Yellow" Width="100"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="PixelateEffect">
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Text="马赛克，像素化："/>
+
+                        <Ellipse Fill="Yellow" Height="100" Stroke="Yellow" Width="100">
+                            <Ellipse.Effect>
+                                <ee:PixelateEffect Pixelation="0.90"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+                        <Ellipse Fill="Yellow" Height="100" Stroke="Yellow" Width="100"/>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="PointLightEffect">
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Text="像素效果："/>
+
+                        <Ellipse Fill="Yellow" Height="100" Stroke="Yellow" Width="100">
+                            <Ellipse.Effect>
+                                <WpfControlLib:PointLightEffect FillColor="#FFE82424" 
+                                                                Light1Color="#FF48B906" 
+                                                                Light2Color="#FF0231D1"
+                                                                Light1Position="0.5 0.5"
+                                                                Light2Position="0.9 0.9"
+                                                                />
+                            </Ellipse.Effect>
+                        </Ellipse>
+                        
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="RippleEffect">
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Text="使泛起涟漪; （把头发） 弄成波浪形; 使作潺潺声;："/>
+
+                        <Ellipse Fill="Yellow" Height="100" Stroke="Yellow" Width="100">
+                            <Ellipse.Effect>
+                                <ee:RippleEffect Frequency="55" Magnitude="0" Phase="0"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+
+                        <Ellipse Fill="Yellow" Height="100" Stroke="Yellow" Width="100">
+                            <Ellipse.Effect>
+                                <ee:RippleEffect Frequency="20"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+
+                        <Ellipse Fill="Yellow" Height="100" Stroke="Yellow" Width="100">
+                            <Ellipse.Effect>
+                                <ee:RippleEffect Frequency="40" Magnitude="1"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+                        <Ellipse Fill="Yellow" Height="100" Stroke="Yellow" Width="100">
+                            <Ellipse.Effect>
+                                <ee:RippleEffect Phase="50"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="SharpenEffect">
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Text="漩涡效应："/>
+
+                        <Ellipse Fill="Yellow" Height="100" Stroke="Black" Width="100">
+                            <Ellipse.Effect>
+                                <ee:SwirlEffect  TwistAmount="1"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+
+                        <Ellipse Fill="Green" Height="100" Stroke="Black" Width="100">
+                            <Ellipse.Effect>
+                                <ee:SwirlEffect TwistAmount="10"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+                        <Ellipse Fill="Green" Height="100" Stroke="Black" Width="100">
+                            <Ellipse.Effect>
+                                <ee:SwirlEffect TwistAmount="30"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+
+                        <Ellipse Fill="Green" Height="100" Stroke="Black" Width="100">
+                            <Ellipse.Effect>
+                                <ee:SwirlEffect TwistAmount="50"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="SharpenEffect">
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Text="锐化："/>
+
+                        <Ellipse Fill="Yellow" Height="100" Stroke="Yellow" Width="100">
+                            <Ellipse.Effect>
+                                <ee:SharpenEffect/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+
+                        <Ellipse Fill="Yellow" Height="100" Stroke="Yellow" Width="100">
+                            <Ellipse.Effect>
+                                <ee:SharpenEffect Amount="10" Height="0.04"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+
+
+    </Grid>
+</Page>

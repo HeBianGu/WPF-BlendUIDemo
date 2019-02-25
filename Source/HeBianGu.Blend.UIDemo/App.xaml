@@ -1,7 +1,11 @@
-﻿<Application x:Class="HeBianGu.Blend.UIDemo.App"
+﻿<Application
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:HeBianGu.Blend.UIDemo"
+             xmlns:SampleDataSource="clr-namespace:Expression.Blend.SampleData.SampleDataSource" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" x:Class="HeBianGu.Blend.UIDemo.App"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -15,8 +19,7 @@
 
             </ResourceDictionary.MergedDictionaries>
 
-            <!--从资源中设置默认样式-->
-            <Style x:Key="{x:Type Button}"  BasedOn="{StaticResource ModernDefultBaseButtonStyle}" TargetType="{x:Type Button}"/>
+            <SampleDataSource:SampleDataSource x:Key="SampleDataSource" d:IsDataSource="True"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

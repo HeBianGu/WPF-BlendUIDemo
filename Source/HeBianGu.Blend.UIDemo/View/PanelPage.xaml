@@ -1,0 +1,113 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HeBianGu.Blend.UIDemo.View"
+      xmlns:ec="http://schemas.microsoft.com/expression/2010/controls"
+      xmlns:WpfControlLib="clr-namespace:HeBianGu.General.WpfControlLib;assembly=HeBianGu.General.WpfControlLib" x:Class="HeBianGu.Blend.UIDemo.View.PanelPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="PanelPage">
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="PathPanel">
+                <StackPanel>
+                    <ec:PathPanel Height="100">
+                        <Path Stroke="Red" Data="M34.025316,27.025823 C83.392405,57.40557 47.613926,82.032659 87.487343,55.450381 127.36076,28.868102 105.52535,65.893876 105.52535,65.893876" Fill="Yellow" Height="40.749" Stretch="Fill" Width="78.466"/>
+                        <Path Stroke="Black" Data="M108.07595,16.582785 C222.94937,34.620759 200.46203,11.779494 224.1962,34.564304 247.93038,57.349114 214.70276,79.182885 214.70276,79.182885 302.99401,79.182656 297.29779,106.71347 297.29779,68.739935 297.29779,30.766405 287.80403,34.563836 319.13318,45.006602 350.46234,55.449368 344.76608,36.462521 350.46229,55.449368" Fill="Yellow" Height="73.245" Stretch="Fill" Width="243.386"/>
+                        <Path Stroke="Blue" Data="M149.8481,46.013165 L211.85443,81.083291 192.86732,106.71642 224.1966,115.2608 251.72852,106.71676 254.57639,82.982366 241.28506,63.045474 C241.28506,63.045474 268.81678,43.108581 273.56363,63.994849 278.31048,84.881118 261.22199,83.931742 279.26005,84.881118 297.2981,85.830494 300.14666,70.64048 297.29854,85.830494 294.45042,101.02051 273.56438,100.07113 294.45064,101.02051 315.3369,101.96988 318.18502,90.577373 315.3369,101.96988 312.48877,113.36239 311.53983,117.1599 327.67925,113.36239 343.81868,109.56489 359.00887,118.10927 367.55328,108.61551 376.09768,99.121756 389.38848,82.03299&#xA;380.84409,76.336735 372.2997,70.64048 362.80583,61.146722 352.36269,62.096098 341.91955,63.045474 324.83078,60.197346 321.03328,63.045474 317.23577,65.893601 284.95698,113.36239 284.95698,113.36239" Fill="Yellow" Height="70.247" Stretch="Fill" Width="234.748"/>
+                        <Path Data="M121.36709,40.316962" Fill="Yellow" Height="1" Stretch="Fill" Stroke="Yellow" Width="1"/>
+                    </ec:PathPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="SelectiveScrollingGrid">
+                <ScrollViewer>
+                    <SelectiveScrollingGrid>
+                        <SelectiveScrollingGrid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="100"/>
+                        </SelectiveScrollingGrid.RowDefinitions>
+
+                        <!--此处需要动态设置才生效SelectiveScrollingGrid.SelectiveScrollingOrientation="None"-->
+                        <TextBlock  Background="Red" 
+                                    SelectiveScrollingGrid.SelectiveScrollingOrientation="None" 
+                                    Text="一个可在视图滚动时将指定单元格固定在原位的面板。 "/>
+
+                        <TextBlock Grid.Row="1" Text="111111111111111111111111111111111111"/>
+                        <TextBlock Grid.Row="2" Text="111111111111111111111111111111111111"/>
+                        <TextBlock Grid.Row="3" Text="111111111111111111111111111111111111"/>
+                        <TextBlock Grid.Row="4" Text="一个可在视图滚动时将指定单元格固定在原位的面板" 
+                                   SelectiveScrollingGrid.SelectiveScrollingOrientation="None" />
+                        <TextBlock Grid.Row="5" Text="111111111111111111111111111111111111"/>
+                        <TextBlock Grid.Row="6" Text="111111111111111111111111111111111111"/>
+                        <TextBlock Grid.Row="7" Text="111111111111111111111111111111111111"/>
+                    </SelectiveScrollingGrid>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="TabPanel">
+                <ScrollViewer>
+                    <TabPanel >
+                        <TextBlock Text="1111111111111111111111111111"/>
+                        <TextBlock Text="22222222222"/>
+                        <TextBlock Text="333333333333333333"/>
+                        <TextBlock Text="4444444444444444444444444444444444444444"/>
+                        <TextBlock Text="555555555555555555555555555555555555555555555"/>
+                    </TabPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="UniformGrid">
+                <ScrollViewer>
+                    <UniformGrid >
+                        <TextBlock Text="1111111111111111111111111111"/>
+                        <TextBlock Text="22222222222"/>
+                        <TextBlock Text="333333333333333333"/>
+                        <TextBlock Text="4444444444444444444444444444444444444444"/>
+                        <TextBlock Text="555555555555555555555555555555555555555555555"/>
+                    </UniformGrid>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="wrapPanel">
+                <ScrollViewer>
+                    <WrapPanel >
+                        <TextBlock Text="1111111111111111111111111111"/>
+                        <TextBlock Text="22222222222"/>
+                        <TextBlock Text="333333333333333333"/>
+                        <TextBlock Text="4444444444444444444444444444444444444444"/>
+                        <TextBlock Text="555555555555555555555555555555555555555555555"/>
+                    </WrapPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="*VirtualizingPanel虚拟化容器">
+                <ScrollViewer>
+                    <!--<VirtualizingPanel>
+                        <TextBlock Text="1111111111111111111111111111"/>
+                        <TextBlock Text="22222222222"/>
+                        <TextBlock Text="333333333333333333"/>
+                        <TextBlock Text="4444444444444444444444444444444444444444"/>
+                        <TextBlock Text="555555555555555555555555555555555555555555555"/>
+                    </VirtualizingPanel>-->
+                </ScrollViewer>
+            </TabItem>
+            
+        </TabControl>
+    </Grid>
+</Page>
